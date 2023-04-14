@@ -1,0 +1,64 @@
+:root {
+    --color-main: #ffffff;
+    --color-main-card: #ffffff;
+    --color-border-card: #0000002d; 
+    --color-font: #3c4043;
+}
+
+/* Dark theme variables */
+.dark-theme {
+    --color-main: #0d1117;
+    --color-main-card: #161b22;
+    --color-border-card: #30363d; 
+    --color-font: #ffffff;
+}
+
+body{
+    background: var(--color-main);
+    font-family: poppins, sans-serif;
+    font-size: 1rem;
+}
+
+.card{
+    background: var(--color-main-card);
+    border-color: var(--color-border-card);
+    color: var(--color-font);
+}
+
+.label-title h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.label-title h4 span {
+    font-size: 2rem;
+}
+
+.label-title button span{
+    display: flex;
+    font-size: 1rem;
+    height: auto;
+}
+
+tbody{
+    color: var(--color-font);
+}
+
+:focus:not(:focus-visible) {
+    outline: 0;
+    box-shadow: none;
+}
+
+#loader.hide {
+    display: none;
+} 
+
+#data {
+    display: none;
+}
+
+#data.show {
+    display: block;
+}

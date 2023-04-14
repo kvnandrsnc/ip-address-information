@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Get IP Address</title>
+    <!-- Google Fonts (Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <!-- Bootstrap v5.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Icon HTML -->
+    <link rel="icon" href="img/icon.png">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-3 mt-lg-5 mb-3 mb-lg-5">
+            <div class="col-sm-12 col-md-8 col-lg-6 mx-auto">
+                <div class="card">
+                    <div class="card-body">
+                        <div id="loader">
+                            <h4 class="text-center ">Datos de IP</h1>
+                            <hr>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="d-grid col-sm-12 col-md-8 col-lg-4 align-items-center mx-auto">
+                                        <button class="btn btn-dark" id="load-btn" type="button" onclick="loadData()">Iniciar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="data">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="d-flex align-items-center justify-content-between label-title">
+                                        <h4 class="text-uppercase mt-2">
+                                            <span class="material-icons-sharp">wifi</span>Red
+                                        </h4>
+                                        <button type="button" id="themeBtn" onclick="changeTheme()"
+                                            class="btn btn-dark text-nowrap focus-visible">
+                                            <span id="themeIcon" class="material-icons-sharp">light_mode</span>
+                                        </button>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="fw-semibold">Dirección IP</td>
+                                                    <td class="text-end" id="ip"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-semibold">Bloque de red</td>
+                                                    <td class="text-end" id="network"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-semibold">Protocolo</td>
+                                                    <td class="text-end" id="version"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-semibold">Proveedor</td>
+                                                    <td class="text-end" id="asn-org"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="d-flex align-items-center label-title">
+                                        <h4 class="text-uppercase mt-2">
+                                            <span class="material-icons-sharp">south_america</span>Ubicación
+                                        </h4>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="fw-semibold">Región</td>
+                                                    <td class="text-end" id="city-region-region_code"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-semibold">País</td>
+                                                    <td class="text-end" id="country-country-code"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-semibold">Ubicación de región</td>
+                                                    <td class="text-end" id="latidude-longitude"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-semibold">Idioma</td>
+                                                    <td class="text-end" id="language"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-semibold">Zona horaria</td>
+                                                    <td class="text-end" id="timezone-utc_offset"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
